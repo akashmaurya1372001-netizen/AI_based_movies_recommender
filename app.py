@@ -5,7 +5,29 @@ import pickle
 import requests
 import os
 from functools import lru_cache
+import os
+import requests
 
+MOVIES_URL = os.environ["MOVIES_URL"]
+SIMILARITY_URL = os.environ["SIMILARITY_URL"]
+
+
+def download_file(url, filename):
+    if not os.path.exists(filename):
+        print(f"Downloading {filename}...")
+        response = requests.get(url, stream=True)
+        response.raise_for_status()
+
+        with open(filename, "wb") as file:
+            for chunk in response.iter_content(chunk_size=1024 * 1024):
+                if chunk:
+                    file.write(chunk)
+
+        print(f"{filename} downloaded.")
+
+
+download_file(MOVIES_URL, "movies.pkl")
+download_file(SIMILARITY_URL, "similarity.pkl")
 # ============================================================
 # FLASK CONFIGURATION
 # ============================================================
