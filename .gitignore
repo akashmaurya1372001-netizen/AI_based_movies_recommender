@@ -1,3 +1,7 @@
 *.pkl
 *.txt
 *.toml
+# Streamlit
+.streamlit/secrets.toml
+movies.pkl
+similarity.pkl
