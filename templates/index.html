@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Movie Recommender</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        🎬 Movie<span>AI</span>
+    </div>
+
+    <div class="nav-text">
+        Movie Recommendation System
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     SEARCH SECTION
+========================================================= -->
+
+<section class="search-section">
+
+    <div class="search-content">
+
+        <h1>
+            Find your next
+            <span>favorite movie</span>
+        </h1>
+
+        <p>
+            Search for a movie and let our machine-learning
+            model find movies you might love.
+        </p>
+
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="movieSearch"
+                placeholder="🔎 Search movie by name..."
+                autocomplete="off"
+            >
+
+            <button
+                id="recommendButton"
+                onclick="getRecommendations()"
+            >
+                🔥 Get Recommendations
+            </button>
+
+        </div>
+
+
+        <div
+            id="searchMessage"
+            class="search-message"
+        ></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     HERO MOVIE
+========================================================= -->
+
+<section
+    id="hero"
+    class="hero hidden"
+>
+
+    <!-- Background -->
+    <div
+        id="heroBackground"
+        class="hero-background"
+    ></div>
+
+
+    <!-- Content -->
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            🎬 YOUR SEARCH
+        </div>
+
+        <h2 id="heroTitle">
+        </h2>
+
+
+        <div
+            id="heroMeta"
+            class="hero-meta"
+        >
+        </div>
+
+
+        <p
+            id="heroOverview"
+            class="hero-overview"
+        >
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RECOMMENDATIONS
+========================================================= -->
+
+<section
+    id="recommendationsSection"
+    class="recommendations-section hidden"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="section-label">
+                AI PICKS
+            </span>
+
+            <h2>
+                You might also like
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="recommendations"
+        class="movie-grid"
+    >
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     LOADING
+========================================================= -->
+
+<div
+    id="loading"
+    class="loading hidden"
+>
+
+    <div class="spinner"></div>
+
+    <p>
+        Finding movies you might love...
+    </p>
+
+</div>
+
+
+
+<!-- =========================================================
+     ERROR
+========================================================= -->
+
+<div
+    id="errorMessage"
+    class="error-message hidden"
+>
+</div>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <p>
+        🎬 MovieAI
+    </p>
+
+    <span>
+        Powered by Machine Learning
+    </span>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script
+    src="{{ url_for('static', filename='script.js') }}"
+></script>
+
+
+</body>
+
+</html>

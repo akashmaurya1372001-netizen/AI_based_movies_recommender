@@ -1,0 +1,1061 @@
+
+/* ============================================================
+   RESET
+============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #0b0b0f;
+
+    color: #ffffff;
+
+    min-height: 100vh;
+
+}
+
+
+/* ============================================================
+   HIDDEN
+============================================================ */
+
+.hidden {
+    display: none !important;
+}
+
+
+
+/* ============================================================
+   NAVBAR
+============================================================ */
+
+.navbar {
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    background: rgba(
+        11,
+        11,
+        15,
+        0.95
+    );
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    position: relative;
+
+    z-index: 20;
+
+}
+
+
+.logo {
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+
+}
+
+
+.logo span {
+
+    margin-left: 3px;
+
+}
+
+
+.nav-text {
+
+    color: #aaa;
+
+    font-size: 14px;
+
+}
+
+
+
+/* ============================================================
+   SEARCH SECTION
+============================================================ */
+
+.search-section {
+
+    min-height: 430px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background:
+
+        radial-gradient(
+            circle at top,
+            rgba(120, 80, 255, 0.16),
+            transparent 45%
+        ),
+
+        #0b0b0f;
+
+}
+
+
+.search-content {
+
+    width: 100%;
+
+    max-width: 900px;
+
+}
+
+
+.search-content h1 {
+
+    font-size: clamp(
+        40px,
+        6vw,
+        72px
+    );
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.search-content h1 span {
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff4d67,
+            #ff8a5b,
+            #ffc857
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+.search-content p {
+
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    color: #a8a8b3;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* ============================================================
+   SEARCH BOX
+============================================================ */
+
+.search-box {
+
+    display: flex;
+
+    gap: 12px;
+
+    width: 100%;
+
+    max-width: 750px;
+
+    margin: auto;
+
+}
+
+
+.search-box input {
+
+    flex: 1;
+
+    height: 58px;
+
+    padding: 0 20px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    outline: none;
+
+    background: #17171d;
+
+    color: white;
+
+    font-size: 16px;
+
+    transition: 0.25s;
+
+}
+
+
+.search-box input::placeholder {
+
+    color: #777;
+
+}
+
+
+.search-box input:focus {
+
+    border-color: #ff5268;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(255, 82, 104, 0.12);
+
+}
+
+
+.search-box button {
+
+    height: 58px;
+
+    padding: 0 25px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff416c,
+            #ff4b2b
+        );
+
+    transition: 0.25s;
+
+}
+
+
+.search-box button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(255, 65, 108, 0.25);
+
+}
+
+
+.search-box button:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+}
+
+
+
+/* ============================================================
+   SEARCH MESSAGE
+============================================================ */
+
+.search-message {
+
+    min-height: 25px;
+
+    margin-top: 15px;
+
+    color: #ff687d;
+
+    font-size: 14px;
+
+}
+
+
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.hero {
+
+    position: relative;
+
+    min-height: 560px;
+
+    margin: 0 5%;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    isolation: isolate;
+
+    background: #15151b;
+
+}
+
+
+.hero-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -2;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    transition:
+        background-image 0.5s ease;
+
+}
+
+
+.hero-background::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0.60) 45%,
+            rgba(0, 0, 0, 0.10)
+        );
+
+}
+
+
+.hero-background::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    height: 60%;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.95),
+            transparent
+        );
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 700px;
+
+    padding: 60px;
+
+}
+
+
+.hero-badge {
+
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    margin-bottom: 18px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+    color: #ddd;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+.hero-content h2 {
+
+    font-size: clamp(
+        35px,
+        5vw,
+        64px
+    );
+
+    line-height: 1.05;
+
+    margin-bottom: 18px;
+
+    font-weight: 800;
+
+}
+
+
+.hero-meta {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+    color: #eee;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+}
+
+
+.hero-overview {
+
+    color: #d2d2d6;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* ============================================================
+   RECOMMENDATIONS
+============================================================ */
+
+.recommendations-section {
+
+    padding:
+        80px 5%
+        100px;
+
+}
+
+
+.section-heading {
+
+    margin-bottom: 30px;
+
+}
+
+
+.section-label {
+
+    color: #ff5b70;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.section-heading h2 {
+
+    margin-top: 7px;
+
+    font-size: 34px;
+
+    font-weight: 800;
+
+}
+
+
+
+/* ============================================================
+   MOVIE GRID
+============================================================ */
+
+.movie-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(180px, 1fr)
+        );
+
+    gap: 25px;
+
+}
+
+
+
+/* ============================================================
+   MOVIE CARD
+============================================================ */
+
+.movie-card {
+
+    background: #15151b;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.movie-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 20px 45px
+        rgba(0, 0, 0, 0.4);
+
+}
+
+
+.movie-poster {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 2 / 3;
+
+    background: #222;
+
+    overflow: hidden;
+
+}
+
+
+.movie-poster img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.4s ease;
+
+}
+
+
+.movie-card:hover
+.movie-poster img {
+
+    transform:
+        scale(1.05);
+
+}
+
+
+.movie-rating {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 10px;
+
+    padding: 6px 9px;
+
+    border-radius: 8px;
+
+    background:
+        rgba(0, 0, 0, 0.8);
+
+    color: #ffd166;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    backdrop-filter: blur(5px);
+
+}
+
+
+.movie-info {
+
+    padding: 15px;
+
+}
+
+
+.movie-title {
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    margin-bottom: 8px;
+
+}
+
+
+.movie-details {
+
+    color: #999;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+
+/* ============================================================
+   LOADING
+============================================================ */
+
+.loading {
+
+    text-align: center;
+
+    padding: 50px;
+
+    color: #aaa;
+
+}
+
+
+.spinner {
+
+    width: 42px;
+
+    height: 42px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    border:
+        3px solid
+        rgba(255, 255, 255, 0.1);
+
+    border-top-color: #ff5268;
+
+    animation:
+        spin 0.8s linear infinite;
+
+}
+
+
+@keyframes spin {
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+
+/* ============================================================
+   ERROR
+============================================================ */
+
+.error-message {
+
+    width: 90%;
+
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    padding: 16px 20px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 65, 90, 0.10);
+
+    border:
+        1px solid
+        rgba(255, 65, 90, 0.25);
+
+    color: #ff7284;
+
+    text-align: center;
+
+}
+
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+footer {
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    color: #777;
+
+}
+
+
+footer p {
+
+    color: #ddd;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+
+}
+
+
+footer span {
+
+    font-size: 13px;
+
+}
+
+
+
+/* ============================================================
+   RESPONSIVE TABLET
+============================================================ */
+
+@media (max-width: 768px) {
+
+    .nav-text {
+
+        display: none;
+
+    }
+
+
+    .search-section {
+
+        min-height: 400px;
+
+        padding:
+            60px 20px;
+
+    }
+
+
+    .search-content h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .search-box {
+
+        flex-direction: column;
+
+    }
+
+
+    .search-box button {
+
+        width: 100%;
+
+    }
+
+
+    .hero {
+
+        min-height: 500px;
+
+        margin: 0 20px;
+
+    }
+
+
+    .hero-content {
+
+        padding: 35px;
+
+    }
+
+
+    .hero-content h2 {
+
+        font-size: 40px;
+
+    }
+
+
+    .movie-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+        gap: 15px;
+
+    }
+
+
+    .recommendations-section {
+
+        padding:
+            60px 20px;
+
+    }
+
+}
+
+
+
+/* ============================================================
+   RESPONSIVE MOBILE
+============================================================ */
+
+@media (max-width: 480px) {
+
+    .navbar {
+
+        padding: 0 20px;
+
+    }
+
+
+    .logo {
+
+        font-size: 21px;
+
+    }
+
+
+    .search-section {
+
+        padding:
+            50px 20px;
+
+    }
+
+
+    .search-content h1 {
+
+        font-size: 38px;
+
+        letter-spacing: -1px;
+
+    }
+
+
+    .search-content p {
+
+        font-size: 15px;
+
+    }
+
+
+    .hero {
+
+        min-height: 500px;
+
+        margin: 0 12px;
+
+        border-radius: 15px;
+
+    }
+
+
+    .hero-background::before {
+
+        background:
+            linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.95),
+                rgba(0, 0, 0, 0.35)
+            );
+
+    }
+
+
+    .hero-content {
+
+        padding: 25px;
+
+    }
+
+
+    .hero-content h2 {
+
+        font-size: 32px;
+
+    }
+
+
+    .hero-overview {
+
+        font-size: 14px;
+
+        line-height: 1.65;
+
+    }
+
+
+    .recommendations-section {
+
+        padding:
+            50px 15px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 28px;
+
+    }
+
+
+    .movie-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+        gap: 12px;
+
+    }
+
+
+    .movie-info {
+
+        padding: 11px;
+
+    }
+
+
+    .movie-title {
+
+        font-size: 14px;
+
+    }
+
+
+    .movie-details {
+
+        font-size: 11px;
+
+    }
+
+}
