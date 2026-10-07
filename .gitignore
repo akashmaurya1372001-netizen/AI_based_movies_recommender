@@ -1,5 +1,5 @@
 *.pkl
-*.txt
+
 *.toml
 # Streamlit
 .streamlit/secrets.toml
